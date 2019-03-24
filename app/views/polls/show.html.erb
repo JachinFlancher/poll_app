@@ -1,0 +1,24 @@
+  <h2>Question: <%= @poll.question %></h2>
+  <h3>Author: <%= @poll.user.name %></h3>
+  <h4>ID: <%= @poll.id %></h4>
+
+  <% if @poll.errors.any? %>
+    <div class="alert alert-danger">
+      <% @poll.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+    
+    <%= link_to 'Back', polls_path %>
+    <%= link_to 'Take Poll', {:controller=> "polls", :action => "take", :id=>@poll.id}, :class => "btn btn-lg btn-default", :type => "btn" %>
+    <%= link_to 'Delete Poll', {:controller=> "polls", :action => "destroy", :id=>@poll.id}, :method => 'delete', :class => "btn btn-lg btn-default", :type => "btn" %>
+                                
+    
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    
+    <div class="col">
+        <br>
+        <%= pie_chart @poll.responses.group(:answer).count %>
+        <br>
+    </div>

@@ -1,0 +1,28 @@
+// This file will contain any css overrides for any of the bootstrap classes
+
+.container
+{
+    color: $text-color;
+    background-color: $bg-color;
+    border: solid 1px $border-color;
+    text-align: center;
+}
+
+.btn-default
+{
+    color: $text-color;
+    background-color: $button-bg-color;
+    border-color: $border-color;
+}
+
+.btn-default:hover
+{
+    color: $button-color-hover;
+    background-color: $button-bg-color-hover;
+    border-color: $button-border-color-hover;
+}
+
+.table, .table th
+{
+    border: solid 1px $border-color;
+}

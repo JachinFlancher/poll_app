@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ 
+@import "bootstrap";
+
+@import "global-variables";
+@import "bootstrap-custom";
+
+body
+{
+    background: url(UNCCCampus_2.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	
+    background-color: darken($bg-color, 10%);
+    color: $text-color;
+    
+    margin-top: 20px;
+}
+
+table
+{
+}
+
+table, td, th
+{
+    border-collapse: collapse;
+    border: solid 1px $border-color;
+}
+
+th
+{
+    padding: 20px;
+}
+
+td
+{
+    padding: 10px;
+}
+
+tr.clickable:hover {
+   cursor: pointer;
+   background-color: lighten($bg-color, 10%);
+}
+
+input#tag_value
+{
+    color: $text-color;
+    background-color: $button-bg-color;
+    border: solid 1px $border-color;
+    min-width: 40px;
+    width: 40%;
+}
+
+a.no-link
+{
+    text-decoration: none;
+    color: inherit;
+}

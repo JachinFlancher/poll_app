@@ -1,0 +1,24 @@
+    <div class="row">
+        <div class="col">
+            <%= link_to 'Create Poll', new_poll_path, :class => "btn btn-lg btn-default", :type => "btn" %>
+        </div>
+        <div class="col">
+            <%= link_to 'View All Polls', polls_path, :class => "btn btn-lg btn-default", :type => "btn" %>
+        </div>
+        
+        <div class="col">
+            
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <%= render partial: 'table' %>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <%= render partial: 'go_to_poll' %>
+        </div>
+    </div>
